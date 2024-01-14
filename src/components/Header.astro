@@ -1,0 +1,17 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import ThemeIcon from './ThemeIcon.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header class="bg-white dark:bg-slate-800">
+	<nav class="h-[60px] flex items-center justify-around">
+		<div class="header-links w-3/12 h-full flex items-center justify-around">
+			<a class="m-0 p-0 text-2xl inline-block" href="/">{SITE_TITLE}</a>
+			<HeaderLink class="inline-block text-md no-underline" href="/about">About</HeaderLink>
+		</div>
+		<div class="dark-theme-toggler">
+			<ThemeIcon />
+		</div>
+	</nav>
+</header>
