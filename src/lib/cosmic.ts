@@ -11,7 +11,16 @@ export async function getAllPosts() {
 		.find({
 			type: "posts",
 		})
-		.props(["title", "slug", "metadata.description", "metadata.tags", "metadata.content", "metadata.seokeywords", "metadata.createdat"]);
-						
+		.props([
+			"title",
+			"slug",
+			"metadata.description",
+			"metadata.tags",
+			"metadata.content",
+			"metadata.seokeywords",
+			"metadata.createdat",
+			"metadata.cover_image",
+		]);
+
 	return data.objects as CosmicObject[];
 }

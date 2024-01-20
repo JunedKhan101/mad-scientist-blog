@@ -19,6 +19,6 @@ const { article } = Astro.params;
 ---
 
 <ArticleLayout>
-    <h1 class="text-5xl pb-4 font-bold">{post.title}</h1>
+    <h1 class="text-5xl font-bold">{post.title}</h1>
     <PostBody content={post.metadata.content} />
 </ArticleLayout>

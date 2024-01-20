@@ -16,10 +16,10 @@ const components: {} = {
     )
   },
   h2: (h2: { children: string }) => {
-    return <h2 className="text-3xl">{h2.children}</h2>
+    return <h2 className="text-4xl">{h2.children}</h2>
   },
   h3: (h3: { children: string }) => {
-    return <h3 className="text-2xl">{h3.children}</h3>
+    return <h3 className="text-3xl">{h3.children}</h3>
   },
   img: (img: { src: string; alt: string }) => {
     return (
@@ -28,7 +28,7 @@ const components: {} = {
         alt={img.alt}
         loading="lazy"
         decoding="async"
-        className="rounded-md shadow"
+        className="w-2/4 h-auto mx-auto rounded-md shadow"
       />
     )
   }

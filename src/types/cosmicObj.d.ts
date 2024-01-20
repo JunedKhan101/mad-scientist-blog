@@ -15,13 +15,15 @@ export interface Tag {
         color: string;
     };
 }
-
 export interface BlogMetadata {
 	content: string;
     description: string;
     seokeywords: string;
     tags: Tag[];
     createdat: string;
+    cover_image: {
+        imgix_url: string
+    }
 }
 
 export interface CosmicObject {

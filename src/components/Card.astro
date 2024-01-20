@@ -1,18 +1,21 @@
 ---
-const { title, href, description, tags } = Astro.props;
+const { title, href, imgurl, description, tags } = Astro.props;
 var articleLink = `/article/${href}`;
 ---
-
-<a
-	href={articleLink}
-	class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
->
-	<h5
-		class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-	>
-		{title}
-	</h5>
-	<p class="font-normal text-gray-700 dark:text-gray-400">
-		{description}
-	</p>
+<a href={articleLink} class="w-auto h-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 grid grid-rows-auto md:grid-rows-auto min-h-auto group">
+	<img class="rounded-t-lg w-full h-[300px] object-cover" src={imgurl} alt="cover-image" />
+    <div class="p-5">
+		<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+			{
+				description ? (
+					<p class="font-normal text-gray-700 dark:text-gray-400">
+						{description}
+					</p>
+				) : (
+					null
+				)
+			}
+		</p>
+    </div>
 </a>

@@ -8,19 +8,18 @@ const data = await getAllPosts();
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<h1 class="text-2xl text-center mb-4">Welcome</h1>
-	<section>
-		<ul class="grid gap-8 md:grid-cols-2">
-			{
-				data.map((post) => (
-					<Card
-						title={post.title}
-						href={post.slug}
-						description={post.metadata.description}
-						tags={post.metadata.tags.map((tag) => tag)}
-					/>
-				))
-			}
-		</ul>
-	</section>
+	<!-- <h1 class="text-2xl text-center mb-4">Welcome</h1> -->
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:[&>*:first-child]:col-span-2 p-0 m-0">
+		{
+			data.map((post) => (
+				<Card
+					title={post.title}
+					href={post.slug}
+					imgurl={post.metadata.cover_image.imgix_url}
+					description={post.metadata.description}
+					tags={post.metadata.tags.map((tag) => tag)}
+				/>
+			))
+		}
+	</div>
 </BaseLayout>
