@@ -17,6 +17,7 @@ const data = await getAllPosts();
 					href={post.slug}
 					imgurl={post.metadata.cover_image.imgix_url}
 					description={post.metadata.description}
+					postedat={post.metadata.createdat}
 					tags={post.metadata.tags.map((tag) => tag)}
 				/>
 			))

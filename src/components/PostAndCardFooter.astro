@@ -1,0 +1,17 @@
+---
+import type { Tag } from "../types/cosmicObj";
+import formatDate from "../helpers/formatDate";
+
+const { postedat, tags, isArticle } = Astro.props;
+---
+
+<div class="post-footer pt-4">
+	{postedat ? <p>Posted At: {formatDate(postedat)}</p> : null}
+	{
+		tags ? (
+			<p class={isArticle ? "pb-4" : null}>
+				Tags: {tags.map((tag: Tag) => tag.title + ", ")}
+			</p>
+		) : null
+	}
+</div>
