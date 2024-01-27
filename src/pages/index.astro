@@ -1,13 +1,13 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
 import Card from '../components/Card.astro';
 
 import { getAllPosts } from "../lib/cosmic";
 const data = await getAllPosts();
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<ArticleLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<!-- <h1 class="text-2xl text-center mb-4">Welcome</h1> -->
 	<div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 md:[&>*:first-child]:col-span-2 py-8">
 		{
@@ -22,4 +22,4 @@ const data = await getAllPosts();
 			))
 		}
 	</div>
-</BaseLayout>
+</ArticleLayout>

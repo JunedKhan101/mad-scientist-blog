@@ -6,11 +6,11 @@ import { SITE_TITLE } from '../consts';
 
 <header class="bg-white dark:bg-slate-800">
 	<nav class="h-[60px] flex items-center justify-around">
-		<div class="header-links w-3/12 h-full flex items-center justify-around">
-			<a class="m-0 p-0 text-2xl inline-block" href="/">{SITE_TITLE}</a>
-			<HeaderLink class="inline-block text-md no-underline" href="/about">About</HeaderLink>
+		<div class="h-full flex items-center justify-around">
+			<a class="text-xl sm:text-2xl inline-block" href="/">{SITE_TITLE}</a>
 		</div>
-		<div class="dark-theme-toggler">
+		<div class="dark-theme-toggler h-full flex items-center justify-around">
+			<HeaderLink class="pr-4 text-xl sm:text-2xl inline-block no-underline" href="/about">About</HeaderLink>
 			<ThemeIcon />
 		</div>
 	</nav>
