@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TagsList from "../../components/TagsList.astro";
+
+import { getAllPosts } from "../../lib/cosmic";
+import getUniqueTagsList from "../../helpers/getUniqueTagsList";
+const cosmicObj = await getAllPosts();
+const tags = getUniqueTagsList(cosmicObj);
+
+const SITE_TITLE = "Tags";
+const SITE_DESCRIPTION = "List of all tags to browser on Mad Scientist blog";
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<div>
+		<h1 class="text-5xl pb-8">Browse Tags:</h1>
+        <TagsList tags={tags} />
+	</div>
+</BaseLayout>

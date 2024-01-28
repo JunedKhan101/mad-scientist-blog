@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getAllPosts } from "../../lib/cosmic";
+import getUniqueTagsList from "../../helpers/getUniqueTagsList";
+import type { Tag } from "../../types/cosmicObj";
+
+export async function getStaticPaths() {
+	const cosmicObj = (await getAllPosts()) || [];
+	var allUniqueTags = getUniqueTagsList(cosmicObj);
+    // @ts-ignore
+	return allUniqueTags.map((tag: Tag) => {
+		return {
+			params: { tag: tag.title },
+			//   props: { tag: tag }
+		};
+	});
+}
+const { tag } = Astro.params; // slug url
+---
+
+<BaseLayout>
+	<div>
+		<h1 class="text-5xl">{tag}</h1>
+	</div>
+</BaseLayout>

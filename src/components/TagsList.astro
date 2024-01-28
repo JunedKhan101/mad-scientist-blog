@@ -1,0 +1,15 @@
+---
+import TagButton from "./TagButton.astro";
+import type { Tag } from "../types/cosmicObj";
+
+const { tags, isArticle } = Astro.props;
+---
+<div>
+	{
+		tags ? (
+			<p class={isArticle ? "pb-4" : null}>
+				Tags: {tags.map((tag: Tag) => <TagButton tagText={tag.title} tagColor={tag.metadata.color} />)}
+			</p>
+		) : null
+	}
+</div>
