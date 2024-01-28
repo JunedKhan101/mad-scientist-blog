@@ -5,6 +5,6 @@ import formatDate from "../helpers/formatDate";
 const { postedat, tags, isArticle } = Astro.props;
 ---
 <div class="pt-4">
-	{postedat ? <p>Posted At: {formatDate(postedat)}</p> : null}
+	{postedat ? <p class="pb-[5px]">Posted At: {formatDate(postedat)}</p> : null}
 	<TagsList tags={tags} isArticle={isArticle} />
 </div>
