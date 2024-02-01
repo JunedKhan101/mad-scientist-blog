@@ -1,5 +1,9 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import rehypeKatex from 'rehype-katex'
+import remarkMath from 'remark-math'
+import 'katex/dist/katex.min.css'
 
 const components: {} = {
 	p: (p: { children: string }) => {
@@ -37,7 +41,7 @@ const components: {} = {
 
 const PostBody: React.FC<{ content: string }> = ({ content }) => {
 	return (
-		<ReactMarkdown components={components} className="flex flex-col">
+		<ReactMarkdown components={components} className="flex flex-col" remarkPlugins={[remarkMath]} rehypePlugins={[rehypeRaw, rehypeKatex]}>
 			{content}
 		</ReactMarkdown>
 	);
