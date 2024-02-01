@@ -2,13 +2,15 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="About Page" description="Something">
-    <h1 class="text-5xl mb-4">About</h1>
-    <img class="w-[150px] h-auto mb-4 rounded border-2 border-gray-500 dark:border-none" src="/professor.jpg" alt="professor profile image" />
-    <p class="w-auto text-center">
-        The Mad Scientist blog is a scientific niche blog for nerds. <br />
-        The Mad Scientist writes about Physics, Chemistry, Math, Biology, Astronomy and so much more.
-    </p>
-    <p>
-        This is a pet project created by <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.junedkhan.com" target="_blank" rel="noopener noreferrer">Juned Khan</a>
-    </p>
+    <div class="w-full h-svh flex items-center justify-center flex-col">
+        <h1 class="text-5xl mb-4">About</h1>
+        <img class="w-[150px] h-auto mb-4 rounded border-2 border-gray-500 dark:border-none" src="/professor.jpg" alt="professor profile image" />
+        <p class="w-auto text-center">
+            The Mad Scientist blog is a scientific niche blog for nerds. <br />
+            The Mad Scientist writes about Physics, Chemistry, Math, Biology, Astronomy and so much more.
+        </p>
+        <p>
+            This is a pet project created by <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.junedkhan.com" target="_blank" rel="noopener noreferrer">Juned Khan</a>
+        </p>
+    </div>
 </BaseLayout>

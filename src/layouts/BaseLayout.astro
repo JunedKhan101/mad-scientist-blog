@@ -13,9 +13,8 @@ const { title, description } = Astro.props;
 
 	<body>
 		<Header />
-			<main class="w-full min-h-svh flex items-center justify-center flex-col p-5">
-				<slot />
-			</main>
+			<slot />
 		<Footer />
 	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </html>
