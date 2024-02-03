@@ -6,7 +6,7 @@ const { tags, isArticle } = Astro.props;
 ---
 <div>
 	{
-		tags ? (
+		tags && tags.length > 0 ? (
 			<p class={isArticle ? "pb-4" : null}>
 				Tags: {tags.map((tag: Tag) => <TagButton tagText={tag.title} tagColor={tag.metadata.color} />)}
 			</p>
