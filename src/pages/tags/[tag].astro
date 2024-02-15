@@ -11,7 +11,7 @@ export async function getStaticPaths() {
 	return allUniqueTags.map((tag: Tag) => {
 		return {
 			params: { tag: tag.title },
-			//   props: { tag: tag }
+			// props: { tag: tag }
 		};
 	});
 }

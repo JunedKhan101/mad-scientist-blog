@@ -5,7 +5,7 @@ import PostBody from "../../components/PostBody";
 import PostAndCardFooter from "../../components/PostAndCardFooter.astro";
 
 export async function getStaticPaths() {
-  const data = (await getAllPosts()) || []
+  const data = (await getAllPosts()) || [];
 
   return data.map((post) => {
     return {
