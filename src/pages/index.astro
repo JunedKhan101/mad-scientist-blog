@@ -1,7 +1,7 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import ArticleLayout from "../layouts/ArticleLayout.astro";
-import Card from "../components/Card.astro";
+import Posts from "../components/Posts.astro";
 
 import { getAllPosts } from "../lib/cosmic";
 const data = await getAllPosts();
@@ -9,20 +9,5 @@ const data = await getAllPosts();
 
 <ArticleLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<h1 class="text-4xl m-0">Welcome to the Mad Scientist Blog!</h1>
-	<div
-		class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 md:[&>*:first-child]:col-span-2 py-8"
-	>
-		{
-			data.map((post) => (
-				<Card
-					title={post.title}
-					href={post.slug}
-					imgurl={post.metadata.cover_image?.imgix_url ?? null}
-					description={post.metadata.description}
-					postedat={post.metadata.createdat}
-					tags={post.metadata.tags.map((tag) => tag)}
-				/>
-			))
-		}
-	</div>
+	<Posts data={data} />
 </ArticleLayout>
