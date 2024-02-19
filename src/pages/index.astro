@@ -1,13 +1,13 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import ArticleLayout from "../layouts/ArticleLayout.astro";
+import ContainerLayout from "../layouts/ContainerLayout.astro";
 import Posts from "../components/Posts.astro";
 
 import { getAllPosts } from "../lib/cosmic";
 const data = await getAllPosts();
 ---
 
-<ArticleLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<ContainerLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<h1 class="text-4xl m-0">Welcome to the Mad Scientist Blog!</h1>
 	<Posts data={data} />
-</ArticleLayout>
+</ContainerLayout>
