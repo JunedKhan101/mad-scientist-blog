@@ -3,6 +3,7 @@ import HeaderLink from './HeaderLink.astro';
 import ThemeIcon from './ThemeIcon.astro';
 import HamBurger from './HamBurger.astro';
 import Offcanvas from './Offcanvas.astro';
+import Search from './Search.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -16,6 +17,9 @@ import { SITE_TITLE } from '../consts';
 		</div>
 		<div class="dark-theme-toggler h-full hidden sm:flex items-center justify-around">
 			<HeaderLink class="pr-[8px] sm:pr-4 text-xl sm:text-2xl inline-block no-underline" href="/tags">Tags</HeaderLink>
+			<div class="pr-[8px] sm:pr-4 text-xl sm:text-2xl inline-block">
+				<Search />
+			</div>
 			<HeaderLink class="pr-[8px] sm:pr-4 text-xl sm:text-2xl inline-block no-underline" href="/about">About</HeaderLink>
 			<ThemeIcon />
 		</div>
