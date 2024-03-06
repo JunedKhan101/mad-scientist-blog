@@ -6,10 +6,9 @@ html, body {
 	height: 100%;
 }
 html.dark {
-	background-color: #001220;
+	background-color: #19212e;
 	color: #fff;
 }
-
 .dark .nav-links a {
 	color: #fff;
 }
