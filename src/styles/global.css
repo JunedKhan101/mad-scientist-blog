@@ -12,3 +12,6 @@ html.dark {
 .dark .nav-links a {
 	color: #fff;
 }
+.dark dialog {
+	background-color: #19212e !important;
+}
